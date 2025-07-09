@@ -10,20 +10,18 @@ import ApplyJobs from './components/ApplyJobs';
 
 function App() {
   return (
-    <>
-      <BrowserRouter basename="/job-portal">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/jobs" element={<Jobs />} />
-          <Route path="/post-job" element={<PostJob />} />
-          <Route path="/apply-jobs" element={<ApplyJobs />} />
-          <Route path="/saved-job" element={<SaveJobs />} />
-          <Route path="/discussion" element={<Discussion />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/post-job" element={<PostJob />} />
+        <Route path="/apply-jobs" element={<ApplyJobs />} />
+        <Route path="/saved-job" element={<SaveJobs />} />
+        <Route path="/discussion" element={<Discussion />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
